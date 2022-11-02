@@ -1,0 +1,24 @@
+trainingInput:
+    scaleTier: CUSTOM
+    masterType: n1-highmem-2
+    hyperparameters:
+        hyperparameterMetricTag: roc_auc
+        goal: MAXIMIZE
+        maxTrials: 10
+        maxParallelTrials: 2
+        params:
+        - parameterName: l2_reg
+          type: DOUBLE
+          minValue: 0
+          maxValue: 1
+          scaleType: UNIT_LINEAR_SCALE
+        - parameterName: num_parallel_tree
+          type: INTEGER
+          minValue: 1
+          maxValue: 10
+          scaleType: UNIT_LINEAR_SCALE
+        - parameterName: max_tree_depth
+          type: INTEGER
+          minValue: 2
+          maxValue: 10
+          scaleType: UNIT_LINEAR_SCALE

@@ -1,0 +1,11 @@
+
+syntax = "proto2";
+
+message SampleData {
+
+  optional double float64_col = 1;
+  optional int64 int64_col = 2;
+  optional string string_col = 3;
+    
+  required int64 row_num = 4;
+}
